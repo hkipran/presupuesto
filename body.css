@@ -1,0 +1,176 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+/* Estilos del encabezado */
+.header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    margin-right: 20px;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.fiscal-info {
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fiscal-info p {
+    margin: 5px 0;
+}
+
+/* Estilos del contenido principal */
+.main-container {
+    width: 90%;
+    margin: 20px auto 0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 span.cuadrado {
+    border: 1px solid black;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    line-height: 1;
+}
+
+.form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form input,
+.form button {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.total,
+.subtotal {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.detalles,
+.observaciones {
+    margin-top: 20px;
+}
+
+.detalles textarea,
+.observaciones textarea {
+    width: 100%;
+    /* height: 100px; ELIMINADO */
+    min-height: 100px; /* NUEVO: Altura mínima */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: vertical;
+    overflow: auto; /* Mantener el scroll en la pantalla */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+/* Estilos de impresión */
+@media print {
+    body {
+        margin: 0;
+        font-size: 12pt;
+    }
+
+    .main-container {
+        border: none;
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .header-container {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .form {
+        display: none;
+    }
+
+    .detalles textarea,
+    .observaciones textarea {
+        border: none;
+        resize: none;
+        overflow: visible !important; /* !important agregado */
+        height: auto !important; /* !important agregado */
+        padding: 0;
+        font-size: 12pt;
+        white-space: pre-wrap;
+    }
+
+    .total,
+    .subtotal {
+        margin-bottom: 5px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #ccc;
+        padding: 5px;
+        margin: 0;
+        font-size: 0.8em;
+    }
+}

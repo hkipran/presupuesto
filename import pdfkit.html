@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header-container">
+            <div class="image-container">
+                <img src="head web.png" alt="Imagen">
+            </div>
+            <div class="fiscal-info">
+                <p>CUIT: 20-16238621-3</p>
+                <p>Yapeyu N° 1160-San Vicente-Cordoba</p>
+                <p>Teléfono: 351-459-8125</p>
+            </div>
+        </div>
+
+        <div class="header">
+            <h1>Presupuesto</h1>
+            <h1><span class="cuadrado">X</span></h1>
+            <p id="fecha"></p>
+        </div>
+        <div class="form">
+            <h2>Agregar Producto/Servicio</h2>
+            <input type="text" id="Genero" placeholder="Genero">
+            <input type="number" id="Metros" placeholder="Metros" value="1" min="1">
+            <input type="number" id="precio" placeholder="Precio Unitario" min="0">
+            <input type="number" id="Mano de obra" placeholder="Mano de obra" min="0">
+            <input type="number" id="Riel" placeholder="Riel" min="0">
+            <button id="agregar">Agregar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Metros</th>
+                    <th>Precio Unitario</th>
+                    <th>Mano de Obra</th>
+                    <th>Riel</th>
+                    <th>Importe</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="subtotal" id="subtotal">Subtotal: $0.00</div>
+        
+        <div class="observaciones">
+            <textarea id="observaciones" placeholder=""></textarea> 
+        </div>
+
+        <div class="total">Total: $0.00</div>
+
+    </div>
+
+    <footer>
+        <p>El presente documento no es válido como factura.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
